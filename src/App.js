@@ -1,28 +1,36 @@
-
-import './App.css';
-import { ProductCard } from './components/ProductCard';
-import { ProductList } from './components/ProductList';
+import { ProductList } from "./components/ProductList";
+import { ProductCard } from "./components/ProductCard";
+import "./App.css";
 
 function App() {
   const product = {
-    imagesrc:"images/OIP.jpeg",
-    title:"iphone 16 pro",
-    specifications:[
-        "A17 prochip with 6-core gpu",
-        "3x or 5x Telephot camera",
-        "Upto 20 hours of video playback"
+    imageSrc: "images/OIP.jpeg",
+    title: "iPhone 16 Pro",
+    specification: [
+      "A17 Pro chip with 6-core GPU",
+      "3x or 5x Telephoto camera",
+      "Up to 29 hours video playback",
     ],
-    price:9999,
-};
+    price: 999,
+  };
 
   return (
     <div className="App">
       <ProductList>
-        <ProductCard product={product}/>  
-        <ProductCard product={product}/> 
-        <ProductCard product={product}/> 
+        <ProductCard
+          width="96px"
+          height="96px"
+          background="darkolivegreen"
+          product={product}
+        />
+        <ProductCard width="64px" height="64px" product={product} />
+        <ProductCard
+          width="128px"
+          height="128px"
+          background="peru"
+          product={product}
+        />
       </ProductList>
-      
     </div>
   );
 }
